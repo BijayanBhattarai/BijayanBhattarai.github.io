@@ -111,34 +111,24 @@
 </g>
 -->
 
+
 <script>
-    !(function () {
-      let e = document.createElement("script"),
-        t = document.head || document.getElementsByTagName("head")[0];
-      (e.src =
-        "https://cdn.jsdelivr.net/gh/santoshdahal2016/diyochatplugin@e6fe4a14dd45a7e7d866fb338fa9ff6541cf515f/index.js"),
-        (e.async = !0),
-        (e.onload = () => {
-          window.WebChat.default(
-            {
-              customData: { companyId: '18f49974-bcf1-4174-83eb-7740b984fa73' },
-              initPayload: "hello",
-              socketUrl: "wss://backend.diyochat.com/ws/webchat/",
-              title: 'ADD WIDGET TITLE HERE',
-              subtitle: 'ADD WIDGET SUBTITLE HERE',
-              showMessageDate: true,
-              inputTextFieldHint: "What's on your mind?...",
-              embedded: false,
-              params: {
-                storage: "local"
-              }
-            },
-            null
-          );
-        }),
-      t.insertBefore(e, t.firstChild);
-    })();
-  </script>
+  (function(d,t) {
+    var BASE_URL="https://omni.diyochat.com";
+    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=BASE_URL+"/packs/js/sdk.js";
+    g.defer = true;
+    g.async = true;
+    s.parentNode.insertBefore(g,s);
+    g.onload=function(){
+      window.chatwootSDK.run({
+        websiteToken: 'reTtkxdYgzCdY1UiTEDCxcqi',
+        baseUrl: BASE_URL
+      })
+    }
+  })(document,"script");
+</script>
+
 
 
 <!--The webpage at file://www.virtualspirits.com/vsa/si23026cc5638ae-newdesign-vsaenglish.aspx?launcher=button&launchertime=73447&chatwindow=inpage&chatapp=web&vspiritsizeheight=470&vspiritsizewidth=350&startintro=&referrer=&title=Bijayan&clientpage=file%3A%2F%2F%2FUsers%2Fsantoshdahal%2FDesktop%2FBijayan%2FBijayanBhattarai.github.io%2Findex.html might be temporarily down or it may have moved permanently to a new web address.-->   
